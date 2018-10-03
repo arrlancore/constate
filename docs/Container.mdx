@@ -1,0 +1,19 @@
+---
+name: Hello world
+---
+
+import { Playground } from "docz";
+import { Container } from "../src";
+
+# Hello world
+
+<Playground>
+  <Container
+    initialState={{ count: 0 }}
+    actions={{ increment: () => state => ({ count: state.count + 1 }) }}
+  >
+    {state => <button onClick={state.increment}>{state.count}</button>}
+  </Container>
+</Playground>
+
+Hello, I'm a mdx file!
